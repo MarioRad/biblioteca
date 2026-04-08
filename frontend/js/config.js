@@ -1,0 +1,4 @@
+const CONFIG = {
+  SUPABASE_URL: "https://pxlpklspfbhmvoaquaus.supabase.co",
+  SUPABASE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB4bHBrbHNwZmJobXZvYXF1YXVzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQwNTQ1MjUsImV4cCI6MjA4OTYzMDUyNX0.kDyuOW_eyFKvxc3TKtrTfgJsE6qJ29V_9Cw_n__J5fw"
+};

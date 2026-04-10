@@ -1,5 +1,9 @@
 FROM python:3.9-slim
-WORKDIR /app
-RUN pip install --upgrade pip
+WORKDIR /backend
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
-CMD ["python", "scanner.py"]
+COPY . .
+# Instalamos uvicorn y fastapi si no están en requirements
+RUN pip install uvicorn fastapi gunicorn
+EXPOSE 80
+CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "main:app", "--bind", "0.0.0.0:80"]

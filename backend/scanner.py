@@ -30,5 +30,10 @@ def scan_folder(folder):
             if file.lower().endswith(".pdf"):
                 process_pdf(os.path.join(root, file))
 
+#if __name__ == "__main__":
+#    scan_folder(PDF_PATH)
 if __name__ == "__main__":
-    scan_folder(PDF_PATH)
+    if os.path.exists(PDF_PATH):
+        print(f"Éxito: La carpeta existe. Contenido: {os.listdir(PDF_PATH)}")
+    else:
+        print(f"Error: No encuentro la ruta {PDF_PATH}")
